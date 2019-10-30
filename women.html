@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WOMEN'S FASHION</title>
+	<style type="text/css">
+
+        .flex{
+            display: flex;
+            margin-top: 0px;
+        }
+
+        .slideshow-container {
+            display: grid;
+            grid-template-columns: auto auto;
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        .active {
+          background-color: #717171;
+        }
+
+        .line{
+            display: grid;;
+            grid-template-columns: auto auto auto auto;
+            padding: 10px;
+        }
+
+        .borderMain{
+            border: 3px solid black;
+            border-radius: 10px;
+            margin-right: 20px;
+            margin-top: 20px;
+            margin-left: 0px;
+        }
+
+        .line button{
+            margin-left: 100px;
+        }
+		
+		.container{
+			padding: 10px;
+			border-radius: 2px;
+			border-bottom: 10px;
+            margin-top: 20px;
+		}
+
+		.displayProduct{
+			display: grid;
+			grid-template-columns: auto auto auto auto;
+			padding: 10px;
+		}
+
+		.div2 {
+            display: flex;
+            justify-content: space-between;
+            width: 600px;
+            margin-left: 400px;
+        }
+
+        .line button {
+            height: 30px;
+            background: red;
+            color: black;
+            margin-top: 20px;
+            margin-left: 100px;
+        }
+        
+        .line img {
+            align-items: center;
+            margin-top: 20px;
+            width: 300px;
+            height: 250px;
+        }
+
+        .div2 button {
+            height: 30px;
+            background: pink;
+            color: black;
+            margin-top: 20px;
+        }
+        
+        .div2 p {
+            color: blue;
+            font-family: sans-serif;
+            font-size: 15px;
+            margin-top: 30px;
+        }
+
+        .div2 img {
+            align-items: center;
+            height: 50px;
+            width: 50px;
+            margin-top: 20px;
+        }
+        
+		button{
+			color: black;
+			background-color: red;
+			width: 100px;
+			height: 50px;
+		}
+
+        h1{
+            text-align: center;
+        }
+
+		h3{
+			color: purple;
+            text-align: center;
+		}
+
+		h4{
+			color: green;
+            text-align: center;
+		}
+
+		h5{
+			color: lightgreen;
+            text-align: center;
+		}
+        
+        .content h2 {
+            color: black;
+        }
+
+        .content{
+        	display: flex;
+        }
+
+        .products{
+        	display: grid;
+        	grid-template-columns: auto auto auto auto;
+        }
+
+        .menu{
+            display: flex;
+            flex-wrap: wrap;
+            background: pink;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .menu a:hover{
+            background-color: gray;
+        }
+
+        .menu a{
+            margin: 10px;
+            margin-top: 0px;
+            text-decoration: none;
+            text-transform: uppercase;
+            justify-content: center;
+        }
+
+        .button{
+            margin-left: 350px;
+            justify-content: left;
+        }
+
+        .button button{
+            margin-top: 15px;
+        }
+
+        .search{
+            height: 20px;
+            width: 300px;
+            background: white;
+            border: 1px solid black;
+            border-radius: 10px;
+            justify-content: left;
+            margin-left: 10px;
+            margin-top: 30px;
+        }
+
+	</style>
+</head>
+<body>
+    <div class="flex">
+        <h1 style="width: 100%; color: white; background-color: pink">
+            WOMEN'S FASHION
+            <marquee style="color: green" >
+                Welcom to our fashion shop
+                <img src="smile.jpg" style="width: 20px; margin-top: 20px;">
+                <img src="smile.jpg" style="width: 20px; margin-top: 20px;">
+            </marquee>
+        </h1>	
+    </div>
+
+    <div class="slideshow-container">
+            <div class="logo" style="margin-top: 80px">
+                <img src="logo.jpg" style="width: 200px">
+            </div>
+
+            <div class="mySlides fade">
+              <img src="shop1.jpg" style="width:100%; height: 300px">
+            </div>
+
+            <div class="mySlides fade">
+              <img src="shop2.jpg" style="width:100%; height: 300px">
+            </div>
+    </div>
+
+    <div class="menu">
+        <div class="menu a">
+            <a href="women.html">HOME PAGE</a>
+            <a href="clothes.html">CLOTHES</a>
+            <a href="shoes.html">SHOES</a>
+            <a href="add.html">ADD PRODUCT</a>
+        </div>
+        <div class="button">
+            <button  input class="search" type="text" placeholder="search" name="" style="margin-right:10px" style>
+                <img src="icon.png" alt="icon.png" style="margin-left: 250px" width="15px" height="15px">
+            </button>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+
+                slideIndex++;
+
+              if (slideIndex > slides.length) {
+                slideIndex = 1
+              } 
+
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+
+                slides[slideIndex-1].style.display = "block";         
+                setTimeout(showSlides, 2000); 
+        }
+
+    </script>
+
+	<div id = "container"></div>
+	<hr>
+    <div id = "container-cart"></div>
+
+    <div class="content">
+        <button style="margin-top: 50px;">
+            <b style="margin-top: 100px">CART</b>
+            <h2 id = "count" style="margin-left: 60px; margin-top: 0px"></h2>
+        </button>
+    </div>
+
+    <div class="content">
+        <button onclick ="sumClick()" style="padding-right: 15px;background-color:orange">			TOTAL PRICE   
+        </button>
+        <h2 id="result" style="margin-left: 20px"></h2>
+    </div>
+	    
+	<script type="text/javascript">
+
+		var image1 = {
+            image: "vay.jpg",
+            name: "Váy Công Chúa",
+            price: 300000
+        }
+
+        var image2 = {
+            image: "vay1.jpg",
+            name: "Váy Xòe",
+            price: 250000
+        }
+
+        var image3 = {
+            image: "cv.jpg",
+            name: "Chân Váy",
+            price: 200000
+        }
+
+        var image4 = {
+            image: "baggy.jpg",
+            name: "Quần Baggy",
+            price: 150000
+        }
+
+        var image5 = {
+            image: "aobb.jpg",
+            name: "Áo Babydolly",
+            price: 300000
+        }
+
+        var image6 = {
+            image: "quan.jpg",
+            name: "Quần Ống Rộng",
+            price: 180000
+        }
+
+        var image7 = {
+            image: "yem.jpg",
+            name: "Váy Yếm",
+            price: 150000
+        }
+
+        var image8 = {
+            image: "bupbe.jpg",
+            name: "Giày Búp Bê",
+            price: 150000
+        }
+
+        var image9 = {
+            image: "caogot.jpg",
+            name: "Giày Cao Gót",
+            price: 250000
+        }
+
+        var image10 = {
+            image: "nike.jpg",
+            name: "Giày Nike",
+            price: 400000
+        }
+
+        var image11 = {
+            image: "van.jpg",
+            name: "Giày Vans",
+            price: 500000
+        }
+
+        var image12 = {
+            image: "vintage.jpg",
+            name: "Giày Vintage",
+            price: 350000
+        }
+
+        var cart = [];
+        var products = [image1, image2, image3, image4, image5, image6,
+                        image7,image8,image9, image10, image11, image12];
+
+        function Count() {
+
+            var count = 0;
+            
+            for (var k = 0; k < cart.length; k++) {
+                count++;
+            }
+
+            document.getElementById("count").innerHTML = count;
+        }
+
+        function sumClick() {
+
+        	var sum = 0;
+
+        	for (var l = 0; l < cart.length; l++) {
+        		 sum += cart[l].price;
+        	}
+
+        	document.getElementById("result").innerHTML = sum;
+        }
+
+        	displayProduct();
+            displayCart();
+
+
+        function displayProduct() {
+
+		for (var i = 0; i < products.length; i++) {
+
+			var container = document.getElementById("container");
+
+			var line = document.createElement("line");
+			
+			var img = document.createElement("img");
+				img.src = products[i].image;
+
+			var nameObj = document.createElement("h1");
+				nameObj.innerText = products[i].name;
+
+			var price = document.createElement("h4");
+				price.innerText = products[i].price;
+
+			var buttonAdd = document.createElement("button");
+				buttonAdd.innerText = "Đặt Mua";
+
+				line.appendChild(img);
+				line.appendChild(nameObj);
+				line.appendChild(price);
+				line.appendChild(buttonAdd);
+                container.className = "line";
+				container.appendChild(line);
+                line.className = "borderMain";
+
+                buttonAdd.onclick = function(arg) {
+                    return function() {
+                        alert("This product added on Cart")
+                        cart.push(products[arg]);
+                        document.getElementById("container-cart").innerHTML = "";
+                        displayCart();
+                    }
+                }(i)
+     		}
+
+            if (products.length == 0) {
+                Count() = 0;
+            } else {
+                Count();
+            }
+        }
+
+        function displayCart() {
+
+            var container_cart = document.getElementById("container-cart");
+
+            for (var j = 0; j < cart.length; j++) {
+
+                var div2 = document.createElement("div");
+                    div2.className = "div2";
+
+                var image = document.createElement("img");
+                    image.src = cart[j].image;
+
+                var nameObj = document.createElement("p");
+                    nameObj.innerText = cart[j].name;
+
+                var price = document.createElement("p");
+                    price.innerText = cart[j].price;
+                
+                var buttonDelete = document.createElement("button");
+                    buttonDelete.innerText = "Delete";
+                
+                div2.appendChild(image);
+                div2.appendChild(nameObj);
+                div2.appendChild(price);
+                div2.appendChild(buttonDelete);
+                container_cart.appendChild(div2);
+
+                buttonDelete.onclick = function(arg) {
+                    return function() {
+                        cart.splice(arg, 1);
+                        document.getElementById("container-cart").innerHTML = "";
+                        displayCart();
+                    }
+                }(j)
+            }
+
+            if (products.length == 0) {
+                Count() = 0;
+            } else {
+                Count();
+            }
+        }
+        
+
+	</script>
+</body>
+</html>
