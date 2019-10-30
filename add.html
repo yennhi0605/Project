@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1 style="color: orange; font: arial; text-align: center;">GIỎ HÀNG CỦA BẠN</h1>
+	<div id="container_cart"></div>
+	<script type="text/javascript">
+
+		 function displayCart() {
+
+            var container_cart = document.getElementById("container-cart");
+
+            for (var j = 0; j < cart.length; j++) {
+
+                var div2 = document.createElement("div");
+                    div2.className = "div2";
+
+                var image = document.createElement("img");
+                    image.src = cart[j].image;
+
+                var nameObj = document.createElement("p");
+                    nameObj.innerText = cart[j].name;
+
+                var price = document.createElement("p");
+                    price.innerText = cart[j].price;
+                
+                var buttonDelete = document.createElement("button");
+                    buttonDelete.innerText = "Delete";
+                
+                div2.appendChild(image);
+                div2.appendChild(nameObj);
+                div2.appendChild(price);
+                div2.appendChild(buttonDelete);
+                // container_cart.appendChild(div2);
+
+                buttonDelete.onclick = function(arg) {
+                    return function() {
+                        cart.splice(arg, 1);
+                        document.getElementById("container-cart").innerHTML = "";
+                        displayCart();
+                    }
+                }(j)
+            }
+                if (products.length == 0) {
+                  Count() = 0;
+                } else {
+                    Count();
+             }
+        }
+	</script>
+</body>
+</html>
