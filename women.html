@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WOMEN'S FASHION</title>
+	<link rel="stylesheet" type="text/css" href="women.css">
+</head>
+<body>
+    <div class="flex">
+        <h1 style="width: 100%; color: white; background-color: pink">
+            WOMEN'S FASHION
+            <marquee style="color: green" >
+                Welcom to our fashion shop
+                <img src="smile.jpg" style="width: 20px; margin-top: 20px;">
+                <img src="smile.jpg" style="width: 20px; margin-top: 20px;">
+            </marquee>
+        </h1>	
+    </div>
+
+    <div class="slideshow-container">
+            <div class="logo" style="margin-top: 80px">
+                <img src="logo.jpg" style="width: 200px">
+            </div>
+
+            <div class="mySlides fade">
+              <img src="big.gif" style="width:100%; height: 300px">
+            </div>
+
+            <div class="mySlides fade">
+              <img src="shop1.jpg" style="width:100%; height: 300px">
+            </div>
+
+            <div class="mySlides fade">
+              <img src="sale1.jpg" style="width:100%; height: 300px">
+            </div>
+
+            <div class="mySlides fade">
+              <img src="shop2.jpg" style="width:100%; height: 300px">
+            </div>
+    </div>
+
+    <div class="header">
+        <div class="home">
+            <img src="home.png" style="width: 30px; margin-top: 20px">
+            <b>Địa chỉ: 101B Lê Hữ Trác<br> Phước Mỹ, Sơn Trà, Đà Nẵng</b>
+        </div>
+        <div class="email">
+            <img src="download.jpg" style="width: 30px; margin-top: 20px">
+            <b>Email: nhi.nguyen@gmail.com</b>
+        </div>
+        <div class="phone">
+            <img src="phone.png" style="width: 30px; margin-top: 20px">
+            <b>Phone: 0354236247</b>
+        </div>
+        <!-- <div class="carts" style="display: block;">          
+            <button onclick="displayCart()" style="margin-top: 20px; width: 120px">
+                <img src="cart.png" style="width: 30px;">
+                CART
+                <h2 id = "count" style="margin-left: 60px; margin-top: 0px"></h2>
+            </button>
+        </div> -->
+    </div>
+    <div class="menu">
+        <div class="menu a">
+            <a href="women.html">HOME PAGE</a>
+            <a href="clothes.html">CLOTHES</a>
+            <a href="shoes.html">SHOES</a>
+            <a href="add.html">ADD PRODUCT</a>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+
+                slideIndex++;
+
+              if (slideIndex > slides.length) {
+                slideIndex = 1
+              } 
+
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+
+                slides[slideIndex-1].style.display = "block";         
+                setTimeout(showSlides, 2000); 
+        }
+
+    </script>
+
+	<div id = "container"></div>
+	<hr>
+    <div class="content">
+            <button onclick="displayCart()" style="border-radius: 3px solid gray; margin-left: 550px">CART
+                <h2 id = "count" style="margin-left: 60px; margin-top: 0px"></h2>
+            </button>
+        </div>
+
+    <div class="grid">
+        <table id="tbl">
+            <tr class="table-primary table-header" style="text-align: center;">
+                <th style="width: 100px">Image</th>
+                <th>Name Product</th>         
+                <th>Price Product</th>
+            </tr>
+        </table>
+    </div>
+
+    <div id = "container-cart"></div>
+
+    <div class="content">
+        <button onclick ="sumClick()" style="padding-right: 15px;background-color:green; margin-left: 550px; margin-top: 30px">			
+            <b>TOTAL PRICE</b>
+        </button>
+        <h2 id="result" style="margin-left: 100px; margin-top: 50px"></h2>
+    </div>
+
+     <div id="detail">
+        <img id="detail-image" style="width: 400px"><img>
+        <h1 id="detail-name" ></h1>
+        <h3 id="detail-price"></h3>
+        <h4 id="detail-type"></h4>
+        <h4 id="detail-origin"></h4>
+    </div>
+	    
+	<script type="text/javascript">
+
+		var image1 = {
+            image: "vay.jpg",
+            name: "Váy Công Chúa",
+            price: 300000,
+            type: "Chất liệu: Cotton",
+            origin: "Xuất xứ: Việt Nam"
+        }
+
+        var image2 = {
+            image: "vay1.jpg",
+            name: "Váy Xòe",
+            price: 250000,
+            type: "Chất liệu: Voan",
+            origin: "Xuất xứ: Thái Lan"
+        }
+
+        var image3 = {
+            image: "cv.jpg",
+            name: "Chân Váy",
+            price: 200000,
+            type: "Chất liệu: Cotton",
+            origin: "Xuất xứ: Việt Nam"
+        }
+
+        var image4 = {
+            image: "baggy.jpg",
+            name: "Quần Baggy",
+            price: 150000,
+            type: "Chất liệu: Jean",
+            origin: "Xuất xứ: Việt Nam"
+        }
+
+        var image5 = {
+            image: "aobb.jpg",
+            name: "Áo Babydolly",
+            price: 300000,
+            type: "Chất liệu: Voan",
+            origin: "Xuất xứ: Thái Lan"
+        }
+
+        var image6 = {
+            image: "quan.jpg",
+            name: "Quần Ống Rộng",
+            price: 180000,
+            type: "Chất liệu: Thun",
+            origin: "Xuất xứ: Việt Nam"
+        }
+
+        var image7 = {
+            image: "yem.jpg",
+            name: "Váy Yếm",
+            price: 150000,
+            type: "Chất liệu: Cotton",
+            origin: "Việt Nam"
+        }
+
+        var image8 = {
+            image: "bupbe.jpg",
+            name: "Giày Búp Bê",
+            price: 150000,
+            type: "Chất liệu: Da",
+            origin: "Việt Nam"
+        }
+
+        var image9 = {
+            image: "caogot.jpg",
+            name: "Giày Cao Gót",
+            price: 250000,
+            type: "Chất liệu: Da",
+            origin: "Xuất xứ: Thái Lan"
+        }
+
+        var image10 = {
+            image: "nike.jpg",
+            name: "Giày Nike",
+            price: 400000,
+            type: "Chất liệu: Vải",
+            origin: "Việt Nam"
+        }
+
+        var image11 = {
+            image: "van.jpg",
+            name: "Giày Vans",
+            price: 500000,
+            type: "Chất liệu: Vải",
+            origin: "Việt Nam"
+        }
+
+        var image12 = {
+            image: "vintage.jpg",
+            name: "Giày Vintage",
+            price: 350000,
+            type: "Chất liệu: Da",
+            origin: "Việt Nam"
+        }
+
+        var cart = [];
+        var products = [image1, image2, image3, image4, image5, image6,
+                        image7,image8,image9, image10, image11, image12];
+
+        function Count() {
+
+            var count = 0;
+            
+            for (var k = 0; k < cart.length; k++) {
+                count++;
+            }
+
+            document.getElementById("count").innerHTML = count;
+        }
+
+        function sumClick() {
+
+        	var sum = 0;
+
+        	for (var l = 0; l < cart.length; l++) {
+        		 sum += cart[l].price;
+        	}
+
+        	document.getElementById("result").innerHTML = sum;
+        }
+
+        	displayProduct();
+            displayCart();
+
+        function displayProduct() {
+
+		for (var i = 0; i < products.length; i++) {
+
+			var container = document.getElementById("container");
+
+			var line = document.createElement("line");
+			
+			var img = document.createElement("img");
+				img.src = products[i].image;
+
+			var nameObj = document.createElement("h1");
+				nameObj.innerText = products[i].name;
+
+
+			var price = document.createElement("h4");
+				price.innerText = products[i].price;
+
+            var buttonDetail = document.createElement("button");
+                buttonDetail.innerText = "DETAIL";
+
+			var buttonAdd = document.createElement("button");
+				buttonAdd.innerText = "ADD";
+
+				line.appendChild(img);
+				line.appendChild(nameObj);
+				line.appendChild(price);
+                line.appendChild(buttonDetail);
+				line.appendChild(buttonAdd);
+                container.className = "line";
+				container.appendChild(line);
+                line.className = "borderMain";
+
+                buttonDetail.onclick = function(arg){
+                    return function(){          
+                        var selectedItem = products[arg];
+                        displayDetail(selectedItem);
+                    }
+                }(i)
+
+                buttonAdd.onclick = function(arg) {
+                    return function() {
+                        alert("This product added on Cart")
+                        cart.push(products[arg]);
+                        document.getElementById("container-cart").innerHTML = "";
+                    }
+                }(i)
+
+            if (products.length == 0) {
+                Count() = 0;
+            } else {
+                Count();
+            }
+        }
+    }
+      
+        function displayCart() {
+
+            var container_cart = document.getElementById("container-cart");
+
+            for (var j = 0; j < cart.length; j++) {
+
+                var div2 = document.createElement("div");
+                    div2.className = "div2";
+
+                var image = document.createElement("img");
+                    image.src = cart[j].image;
+                    image.className = "image";
+
+                var nameObj = document.createElement("p");
+                    nameObj.innerText = cart[j].name;
+
+                var price = document.createElement("p");
+                    price.innerText = cart[j].price;
+                
+                var buttonDelete = document.createElement("button");
+                    buttonDelete.innerText = "Delete";
+                
+                div2.appendChild(image);
+                div2.appendChild(nameObj);
+                div2.appendChild(price);
+                div2.appendChild(buttonDelete);
+                container_cart.appendChild(div2);
+
+                buttonDelete.onclick = function(arg) {
+                    return function() {
+                        cart.splice(arg, 1);
+                        document.getElementById("container-cart").innerHTML = "";
+                        displayCart();
+                    }
+                }(j)
+            }
+                if (products.length == 0) {
+                  Count() = 0;
+                } else {
+                    Count();
+             }
+        }
+
+
+   
+
+        function displayDetail(item){
+            showDetailAndHideList();
+            document.getElementById("detail-image").src = item.image;
+            document.getElementById("detail-name").innerHTML = item.name;
+            document.getElementById("detail-price").innerHTML = item.price;
+            document.getElementById("detail-type").innerHTML = item.type;
+            document.getElementById("detail-origin").innerHTML = item.origin;
+        }
+
+        function showListAndHideDetail(){
+            document.getElementById("container").style.display = "block";
+            document.getElementById("container-cart").style.display = "none";
+            document.getElementById("detail").style.display = "none";
+        }
+
+        function showDetailAndHideList(){
+            document.getElementById("container").style.display = "none";
+            document.getElementById("container-cart").style.display = "none";
+            document.getElementById("detail").style.display = "block";
+        }
+
+        function showCartAndHideList(){
+            document.getElementById("container").style.display = "none";
+            document.getElementById("container-cart").style.display = "block";
+            document.getElementById("detail").style.display = "none";
+        }
+
+        function showCart(item){
+            document.getElementById("detail-name").innerHTML = item.name;
+            document.getElementById("detail-price").innerHTML = item.price;
+            document.getElementById("detail-type").innerHTML = "Chất liệu vải: Cotton";
+            document.getElementById("detail-origin").innerHTML = "Xuất Xứ: Việt Nam";
+        }
+        displayCart();
+    </script>
+</body>
+</html>
