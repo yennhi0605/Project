@@ -1,0 +1,201 @@
+.flex{
+    display: flex;
+    margin-top: 0px;
+}
+
+.slideshow-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.active {
+  background-color: #717171;
+}
+
+.line{
+    display: grid;;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+}
+
+.borderMain{
+    border: 2px solid lightgrey;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-left: 0px;
+}
+
+.line button{
+    margin-left: 100px;
+}
+
+.container{
+    padding: 10px;
+    border-radius: 2px;
+    border-bottom: 10px;
+    margin-top: 20px;
+}
+
+.displayProduct{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+}
+
+.div2 {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    margin-left: 400px;
+}
+
+.line button {
+    height: 30px;
+    background: pink;
+    color: black;
+    margin-top: 20px;
+    margin-left: 100px;
+}
+
+.line img {
+    align-items: center;
+    margin-top: 20px;
+    width: 300px;
+    height: 250px;
+}
+
+.div2 button {
+    height: 30px;
+    background: pink;
+    color: black;
+    margin-top: 20px;
+}
+
+.div2 p {
+    color: blue;
+    font-family: sans-serif;
+    font-size: 15px;
+    margin-top: 30px;
+}
+
+.div2 img {
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    margin-top: 20px;
+}
+
+button{
+    color: black;
+    background-color: pink;
+    width: 100px;
+    height: 50px;
+}
+
+h1{
+    text-align: center;
+}
+
+h3{
+    color: purple;
+    text-align: center;
+}
+
+h4{
+    color: green;
+    text-align: center;
+}
+
+h5{
+    color: lightgreen;
+    text-align: center;
+}
+
+.content h2 {
+    color: black;
+}
+
+.content{
+    display: flex;
+}
+
+.products{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    background: pink;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.menu a:hover{
+    background-color: gray;
+}
+
+.menu a{
+    margin: 10px;
+    margin-top: 0px;
+    text-decoration: none;
+    text-transform: uppercase;
+    justify-content: center;
+}
+
+.button{
+    margin-left: 350px;
+    justify-content: left;
+}
+
+.button button{
+    margin-top: 15px;
+}
+
+.search{
+    height: 20px;
+    width: 300px;
+    background: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    justify-content: left;
+    margin-left: 10px;
+    margin-top: 30px;
+}
+
+table,tr,th,td{
+    border: 1px solid black;
+}
+
+table{
+    width: 700px;
+    border-spacing: 0;
+    border: 1px solid #bbb ;
+    width: 450px;
+    margin-left: 400px;
+}
+
+#tbl tr{
+    height: 50px;
+}
+
+#tbl tr th, #tbl tr td{
+    text-align: left;
+    border-bottom: 1px solid #bbb;
+    padding-left: 10px;
+}
+
+#tbl{
+    margin-top: 30px;
+}
+
